@@ -1,0 +1,375 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quinta Los Picachos</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f8f2;
+            color: #263b2c;
+        }
+
+        header {
+            background-color: #245137;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav {/*CONCEPTO NUEVO, ES PARA NAVEGACION, PREGUNTA SI SE PUEDE HACER MAS SUAVE*/
+            background-color: #173b29;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {/*menu, enlace, color*/
+            color: white;
+            text-decoration: none;
+            margin: 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {/*recuerda que hover activa un cursor diferente. me gusta mete mas seguido*/
+            color: #b9dc9c;
+        }
+
+        #inicio { /*Aqui esta la imagen, chat recomienda esta configuracion, tengo que revisarla
+            me gusta, ESTUDIA ESTO*/
+            background: linear-gradient(
+                #142e2080, #142e20b3
+            ), url("imagenes/portada.jpg");
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 90px 20px;
+        }
+
+        #inicio h2 {
+            font-size: 35px;
+        }
+
+        section {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        section h2 {
+            color: #28573a;
+        }
+
+        .contenido {
+            max-width: 950px;
+            margin: auto;
+        }
+
+        .boton {/*revisar si agregar, revisa que opciones de css tienes*/
+            display: inline-block;
+            background-color: #53864c;
+            color: white;
+            padding: 12px 22px;
+            margin: 8px;
+            border-radius: 5px;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .boton:hover {
+            background-color: #345e35;
+        }
+
+        .tarjetas {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .tarjeta {
+            background-color: white;
+            width: 240px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px #d4dfd1;
+        }
+
+        .tarjeta h3 {
+            color: #326647;
+        }
+
+        #servicios, #reglamento {
+            background-color: #e8f0e5;
+        }
+
+        #noche {
+            background: linear-gradient(
+                #06151c66, #06151cdd
+            ), url("imagenes/campamento-noche.jpg");
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 90px 20px;
+        }
+
+        #noche h2 {
+            font-size: 35px;
+        }
+
+        #noche h3 {
+            color: #c9e7b8;
+            font-size: 27px;
+        }
+
+        form {
+            background-color: white;
+            max-width: 500px;
+            margin: auto;
+            padding: 25px;
+            text-align: left;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px #d4dfd1;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        input, textarea { /*segun chat gpt: Se utiliza para escribir textos más largos, como comentarios, mensajes o descripciones.
+            buen recurso si quiero meter mas text en input*/
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #b9cdb7;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .reglas {
+            max-width: 650px;
+            margin: auto;
+            text-align: left;
+        }
+
+        .reglas li {
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background-color: #173b29;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        footer a {
+            color: #b9dc9c;
+        }
+
+
+        /*me interesa meter @media, es para adaptar a pantallas, tengo que revisar mas, mejorar css
+        tambien mejorar fotos agregar mas codigo, me gustaria un pagina solo para reservacion, y cada
+        seccion separarla entre paginas, index deriva a info y index deriva a noche, <-- esto para avance 2*/
+    </style>
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+    <header>
+        <h1>QUINTA LOS PICACHOS</h1>
+        <p>La Huasteca | Santa Catarina, Nuevo León</p>
+        <p>Naturaleza, descanso y aventura</p>
+    </header>
+
+    <!-- MENÚ -->
+     <!-- Este es el menu que propone chat, me interesa probar es como un div mero precisamente para esto-->
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#informacion">Información</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#noche">Camping</a>
+        <a href="#reservacion">Reservación</a>
+        <a href="#contacto">Contacto</a>
+    </nav> 
+
+    <!-- PORTADA -->
+    <div id="inicio">
+        <h2>Conecta con la naturaleza</h2>
+        <p>
+            Disfruta de las montañas de La Huasteca
+            en un ambiente familiar y natural.
+        </p>
+        <a href="#informacion" class="boton">Conoce la quinta</a>
+        <a href="#noche" class="boton">Campamento nocturno</a>
+    </div>
+
+    <!-- INFORMACIÓN DEL DÍA -->
+    <section id="informacion">
+        <div class="contenido">
+            <h2>Bienvenidos a Quinta Los Picachos</h2>
+            <p>
+                Somos un espacio recreativo ubicado en
+                La Huasteca, Santa Catarina, ideal para
+                disfrutar de la naturaleza con familia y amigos.
+            </p>
+
+            <div class="tarjetas">
+                <div class="tarjeta">
+                    <h3>Horario</h3>
+                    <p>Abierto todos los días</p>
+                    <p><b>10:00 a. m. a 8:00 p. m.</b></p>
+                </div>
+
+                <div class="tarjeta">
+                    <h3>Entrada general</h3>
+                    <h2>$150 MXN</h2>
+                    <p>Menores de 2 años entran gratis.</p>
+                </div>
+
+                <div class="tarjeta">
+                    <h3>Sin reservación</h3>
+                    <p>
+                        Para las visitas durante el día
+                        solo tienes que llegar y pagar
+                        tu entrada.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICIOS -->
+    <section id="servicios">
+        <div class="contenido">
+            <h2>Nuestros servicios</h2>
+            <p>
+                Contamos con instalaciones para disfrutar
+                de un día agradable al aire libre.
+            </p>
+
+            <div class="tarjetas">
+                <div class="tarjeta">
+                    <h3>Alberca</h3>
+                    <p>Disfruta de nuestras áreas acuáticas.</p>
+                </div>
+
+                <div class="tarjeta">
+                    <h3>Palapas y asadores</h3>
+                    <p>Espacios para descansar y convivir.</p>
+                </div>
+
+                <div class="tarjeta">
+                    <h3>Instalaciones</h3>
+                    <p>
+                        Mesas, sillas, baños, vestidores,
+                        estacionamiento y áreas verdes.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CAMPAMENTO NOCTURNO -->
+    <div id="noche">
+        <h2>Una noche bajo las estrellas</h2>
+        <p>
+            Vive la experiencia de acampar rodeado
+            de las montañas de La Huasteca.
+        </p>
+        <h3>$300 MXN por persona</h3>
+        <p>Entrada: 6:00 p. m. | Salida: 9:00 a. m.</p>
+        <a href="#reservacion" class="boton">
+            Solicitar reservación
+        </a>
+    </div>
+
+    <!-- FORMULARIO -->
+    <section id="reservacion">
+        <h2>Reservación de campamento</h2>
+        <p>Formulario demostrativo para campamento nocturno.</p>
+
+        <form>
+            <label for="nombre">Nombre completo</label>
+            <input type="text" id="nombre" required>
+
+            <label for="telefono">Teléfono</label>
+            <input type="tel" id="telefono" required>
+
+            <label for="fecha">Fecha de llegada</label>
+            <input type="date" id="fecha" required>
+
+            <label for="personas">Número de personas</label>
+            <input type="number" id="personas" min="1" required>
+
+            <label for="comentarios">Comentarios</label>
+            <textarea id="comentarios"></textarea>
+
+            <button type="submit" class="boton">
+                Solicitar reservación
+            </button>
+        </form>
+    </section>
+
+    <!-- REGLAMENTOO ponemos una lista, no se si se pueda mejorar, INVESTIGAR AQUI-->
+    <section id="reglamento">
+        <h2>Reglamento general</h2>
+
+        <div class="reglas">
+            <ul>
+                <li>Mantener la música a volumen moderado.</li>
+                <li>No correr ni jugar bruscamente en la alberca.</li>
+                <li>Supervisar a los menores de edad.</li>
+                <li>Depositar la basura en su lugar.</li>
+                <li>Respetar las instalaciones y áreas verdes.</li>
+                <li>Se recomienda evitar fumar.</li>
+                <li>¡Disfruta tu visita!</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- CONTACTO conctacto real -->
+    <section id="contacto">
+        <h2>Contacto y ubicación</h2>
+        <p>La Huasteca, Santa Catarina, Nuevo León.</p>
+        <p>Teléfono: <b>81 8257 2088</b></p>
+        <p>
+            También se pueden organizar eventos nocturnos
+            con previo aviso a la administración.
+        </p>
+
+        <a href="tel:8182572088" class="boton">Llamar</a> <!-- interesante como puedo poner href en telefono, revisar si se puede usar java-->
+        <a href="https://www.facebook.com/people/Quinta-Los-Picachos-La-Huasteca/100065184687059/"
+           target="_blank" class="boton">Facebook</a> <!--target="_blank" abre face en una nueva pesta;a del navegador
+           y utilisa el ref sobre la pagina, desde un boton-->
+
+        <p>
+            Próximamente agregaremos un croquis con
+            indicaciones desde la entrada de La Huasteca. <!--me parece buena idea, revisar si se puede agregar un maps
+            con una ruta marcada accediendo desde la ubicacion, o un mapa marcado desde la entrada hasta la quinta-->
+        </p>
+    </section>
+
+
+    <footer>
+        <h3>Quinta Los Picachos</h3>
+        <p>Naturaleza, descanso y aventura.</p>
+        <p>© 2026 Quinta Los Picachos</p> 
+    </footer>
+
+</body>
+</html>
